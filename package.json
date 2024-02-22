@@ -1,8 +1,9 @@
 {
-  "name": "untitled5",
+  "name": "ts-optional",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "types": "optional.d.ts",
+  "main": "optional.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
