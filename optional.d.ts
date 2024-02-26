@@ -87,4 +87,12 @@ export declare class Optional<T> {
      * @throws {Error} - If no value is present.
      */
     orElseThrow(msg: string): T;
+    /**
+     * Returns an Optional describing the specified value, if non-null, otherwise returns an empty Optional.
+     *
+     * @template T the type of the value
+     * @param {T | null | undefined} value the possibly-null value to describe
+     * @return {Optional<T>} an Optional with a present value if the specified value is non-null, otherwise an empty Optional
+     */
+    static ofNullable<T>(value: T | null | undefined): Optional<T>;
 }

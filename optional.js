@@ -133,5 +133,15 @@ class Optional {
         }
         return this.value;
     }
+    /**
+     * Returns an Optional describing the specified value, if non-null, otherwise returns an empty Optional.
+     *
+     * @template T the type of the value
+     * @param {T | null | undefined} value the possibly-null value to describe
+     * @return {Optional<T>} an Optional with a present value if the specified value is non-null, otherwise an empty Optional
+     */
+    static ofNullable(value) {
+        return value === null || value === undefined ? Optional.empty() : Optional.of(value);
+    }
 }
 exports.Optional = Optional;
